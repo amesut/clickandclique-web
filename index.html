@@ -106,10 +106,36 @@
             color: var(--primary-color);
             text-decoration: none;
             margin: 0 0.5rem;
+            cursor: pointer;
         }
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Bildirim Balonu (Toast Notification) */
+        .toast {
+            visibility: hidden;
+            min-width: 280px;
+            background-color: #2d3436;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 20px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .toast.show {
+            visibility: visible;
+            opacity: 1;
         }
     </style>
 </head>
@@ -135,9 +161,30 @@
         <p>&copy; 2026 Click & Clique. All rights reserved.</p>
         <p>
             <a href="privacy.html">Privacy Policy</a> | 
-            <a href="mailto:support@clickandclique.com">Contact & Support</a>
+            <a href="mailto:support@clickandclique.com" id="copy-email">Contact & Support</a>
         </p>
     </footer>
+
+    <div id="toast" class="toast">Support email copied to clipboard!</div>
+
+    <script>
+        document.getElementById('copy-email').addEventListener('click', function(e) {
+            const email = 'support@clickandclique.com';
+            
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(email);
+                showToast();
+            }
+        });
+
+        function showToast() {
+            const toast = document.getElementById("toast");
+            toast.className = "toast show";
+            setTimeout(function(){ 
+                toast.className = toast.className.replace("show", ""); 
+            }, 3000);
+        }
+    </script>
 
 </body>
 </html>
