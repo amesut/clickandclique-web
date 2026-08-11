@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Request deletion of your Click & Clique account and associated personal data." />
+  <title>Delete Account — Click & Clique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Syne:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="site-header" id="siteHeader">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html">Click <span>&amp;</span> Clique</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" id="navToggle">Menu</button>
+        <nav class="nav" id="siteNav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="delete-account.html" aria-current="page">Delete account</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="page-main">
+      <div class="wrap page-hero">
+        <p class="eyebrow">Your data</p>
+        <h1>Delete your account</h1>
+        <p class="lead">
+          Permanently remove your Click &amp; Clique account and associated personal data.
+          The fastest path is inside the app; use the form below if you cannot open it.
+        </p>
+      </div>
+
+      <section class="section section--tight">
+        <div class="wrap stack" style="max-width: 42rem;">
+          <div class="panel">
+            <h2>In the app</h2>
+            <ol class="muted" style="margin: 0; padding-left: 1.2rem;">
+              <li>Open <strong>Profile</strong> → <strong>Settings</strong></li>
+              <li>Tap <strong>Delete Account</strong></li>
+              <li>Read any penalty warnings, then confirm with your password</li>
+            </ol>
+            <p class="form-note" style="margin-top: 1rem;">
+              In-app deletion is immediate after confirmation.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h2>Request by web</h2>
+            <p class="muted" style="margin-top: 0;">
+              Email us from the address linked to your account. We process web requests
+              within <strong>7 days</strong>.
+            </p>
+
+            <form class="form-grid" id="deleteForm" action="mailto:support@clickandclique.com?subject=Delete%20Account%20Request" method="post" enctype="text/plain">
+              <label>
+                Account email
+                <input type="email" name="email" id="email" required autocomplete="email" placeholder="you@example.com" />
+              </label>
+              <label>
+                Username (optional)
+                <input type="text" name="username" id="username" autocomplete="username" placeholder="Your Click & Clique username" />
+              </label>
+              <label>
+                Message
+                <textarea name="message" id="message" required>Please delete my Click & Clique account and associated personal data.</textarea>
+              </label>
+              <p class="form-note">
+                Submitting opens your email app with these details. You can also write us directly at
+                <a href="mailto:support@clickandclique.com?subject=Delete%20Account%20Request">support@clickandclique.com</a>.
+              </p>
+              <div class="form-actions">
+                <button class="btn btn--danger" type="submit">Send deletion request</button>
+                <a class="btn btn--outline" href="privacy.html">Read Privacy Policy</a>
+              </div>
+            </form>
+          </div>
+
+          <div class="panel">
+            <h2>What we delete</h2>
+            <ul class="muted" style="margin: 0; padding-left: 1.2rem;">
+              <li>Profile, photo, username, devices, and authentication</li>
+              <li>Chats and personal archives tied to your account</li>
+              <li>Active participations and invitations</li>
+            </ul>
+            <p class="form-note" style="margin-top: 1rem;">
+              Hosted community events with participants, and locked matches / joined
+              community events within 24 hours of start, may apply system rating
+              penalties disclosed before in-app deletion. A limited hashed-email
+              reputation signal may be kept so re-registration cannot wipe ratings.
+              See the <a href="privacy.html">Privacy Policy</a> for details.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>© <span id="y"></span> Click &amp; Clique</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="mailto:support@clickandclique.com">Support</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    (function () {
+      var header = document.getElementById("siteHeader");
+      var toggle = document.getElementById("navToggle");
+      if (!header || !toggle) return;
+      toggle.addEventListener("click", function () {
+        var open = header.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      var form = document.getElementById("deleteForm");
+      if (!form) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = document.getElementById("email").value.trim();
+        var username = document.getElementById("username").value.trim();
+        var message = document.getElementById("message").value.trim();
+        var body =
+          "Account email: " + email +
+          "\nUsername: " + (username || "(not provided)") +
+          "\n\n" + message;
+        var href =
+          "mailto:support@clickandclique.com" +
+          "?subject=" + encodeURIComponent("Delete Account Request") +
+          "&body=" + encodeURIComponent(body);
+        window.location.href = href;
+      });
+    })();
+  </script>
+</body>
+</html>

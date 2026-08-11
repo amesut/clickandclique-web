@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Click & Clique — discover events in your city, match with people going, and build your social circle." />
+  <title>Click & Clique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Syne:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="site-header" id="siteHeader">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html">Click <span>&amp;</span> Clique</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" id="navToggle">Menu</button>
+        <nav class="nav" id="siteNav" aria-label="Primary">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="delete-account.html">Delete account</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="page-main">
+      <section class="hero" aria-label="Click and Clique">
+        <div class="hero__inner">
+          <p class="brand-mark">Click <span>&amp; Clique</span></p>
+          <p class="tagline">
+            Find events in your city, meet people who are going, and turn plans into real nights out.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#about">How it works</a>
+            <a class="btn btn--ghost" href="privacy.html">Privacy</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="wrap">
+          <p class="eyebrow">The app</p>
+          <h2>Events first. People next.</h2>
+          <p class="lead">
+            Browse Ticketmaster and community events near you, join what you like,
+            send match invitations, and chat when it’s a fit — all in one place.
+          </p>
+
+          <div class="features" style="margin-top: 2.5rem;">
+            <article class="feature">
+              <h3>For you &amp; trending</h3>
+              <p>Local listings synced for your city, plus what’s popular where you live.</p>
+            </article>
+            <article class="feature">
+              <h3>Match &amp; chat</h3>
+              <p>Invite someone going to the same event. Accepted matches unlock 1:1 chat.</p>
+            </article>
+            <article class="feature">
+              <h3>Community nights</h3>
+              <p>Host or join VIP community events and keep the conversation in group chat.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="wrap">
+          <div class="cta-band">
+            <div>
+              <h2 style="margin:0;color:#fff;">Need your data removed?</h2>
+              <p>Delete your account in the app, or request deletion from the web.</p>
+            </div>
+            <a class="btn btn--outline" href="delete-account.html">Delete account</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div>© <span id="y"></span> Click &amp; Clique</div>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="delete-account.html">Delete Account</a>
+          <a href="mailto:support@clickandclique.com">Support</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    (function () {
+      var header = document.getElementById("siteHeader");
+      var toggle = document.getElementById("navToggle");
+      if (!header || !toggle) return;
+      toggle.addEventListener("click", function () {
+        var open = header.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    })();
+  </script>
+</body>
+</html>
