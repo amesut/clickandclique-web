@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAMID.com.clickandclique.app",
+        "paths": ["/e.html", "/e.html?*", "/e", "/e/*"]
+      }
+    ]
+  }
+}
