@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.clickandclique.app",
+      "sha256_cert_fingerprints": [
+        "95:F6:66:17:6A:1E:B6:85:2F:5A:CD:C0:64:FC:E3:5B:94:7A:0B:0E:34:2C:8D:2F:B1:79:BA:7D:2E:90:9F:EC"
+      ]
+    }
+  }
+]
