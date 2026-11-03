@@ -3,34 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Request deletion of your Click & Clique account and associated personal data." />
-  <title>Delete Account — Click & Clique</title>
+  <meta name="description" content="Request deletion of your Click &amp; Clique account and associated personal data." data-i18n-content="del.meta" />
+  <title data-i18n="del.title">Delete Account — Click &amp; Clique</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Syne:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
+  <script src="js/site-copy.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <div class="page">
     <header class="site-header" id="siteHeader">
       <div class="site-header__inner">
         <a class="brand" href="index.html">Click <span>&amp;</span> Clique</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" id="navToggle">Menu</button>
-        <nav class="nav" id="siteNav" aria-label="Primary">
-          <a href="index.html">Home</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="delete-account.html" aria-current="page">Delete account</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" id="navToggle" data-i18n="nav.menu">Menu</button>
+        <nav class="nav" id="siteNav" aria-label="Primary" data-i18n-aria="nav.aria">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a href="terms.html" data-i18n="nav.terms">Terms</a>
+          <a href="delete-account.html" aria-current="page" data-i18n="nav.delete">Delete account</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="page-main">
       <div class="wrap page-hero">
-        <p class="eyebrow">Your data</p>
-        <h1>Delete your account</h1>
-        <p class="lead">
+        <p class="eyebrow" data-i18n="del.eyebrow">Your data</p>
+        <h1 data-i18n="del.h1">Delete your account</h1>
+        <p class="lead" data-i18n="del.lead">
           Permanently remove your Click &amp; Clique account and associated personal data.
           The fastest path is inside the app; use the form below if you cannot open it.
         </p>
@@ -39,20 +40,20 @@
       <section class="section section--tight">
         <div class="wrap stack" style="max-width: 42rem;">
           <div class="panel">
-            <h2>In the app</h2>
+            <h2 data-i18n="del.appTitle">In the app</h2>
             <ol class="muted" style="margin: 0; padding-left: 1.2rem;">
-              <li>Open <strong>Profile</strong> → <strong>Settings</strong></li>
-              <li>Tap <strong>Delete Account</strong></li>
-              <li>Read any penalty warnings, then confirm with your password</li>
+              <li data-i18n-html="del.app1">Open <strong>Profile</strong> → <strong>Settings</strong></li>
+              <li data-i18n-html="del.app2">Tap <strong>Delete Account</strong></li>
+              <li data-i18n="del.app3">Read any penalty warnings, then confirm with your password</li>
             </ol>
-            <p class="form-note" style="margin-top: 1rem;">
+            <p class="form-note" style="margin-top: 1rem;" data-i18n="del.appNote">
               In-app deletion is immediate after confirmation.
             </p>
           </div>
 
           <div class="panel">
-            <h2>Request by web</h2>
-            <p class="muted" style="margin-top: 0;">
+            <h2 data-i18n="del.webTitle">Request by web</h2>
+            <p class="muted" style="margin-top: 0;" data-i18n-html="del.webLead">
               Submit the form using the email linked to your account. We process web
               requests within <strong>7 days</strong> and reply to that address.
             </p>
@@ -76,36 +77,36 @@
               <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
               <label>
-                Account email
-                <input type="email" name="email" id="email" required autocomplete="email" placeholder="you@example.com" />
+                <span data-i18n="del.email">Account email</span>
+                <input type="email" name="email" id="email" required autocomplete="email" placeholder="you@example.com" data-i18n-placeholder="del.emailPh" />
               </label>
               <label>
-                Username (optional)
-                <input type="text" name="username" id="username" autocomplete="username" placeholder="Your Click & Clique username" />
+                <span data-i18n="del.user">Username (optional)</span>
+                <input type="text" name="username" id="username" autocomplete="username" placeholder="Your Click & Clique username" data-i18n-placeholder="del.userPh" />
               </label>
               <label>
-                Message
-                <textarea name="message" id="message" required>Please delete my Click & Clique account and associated personal data.</textarea>
+                <span data-i18n="del.message">Message</span>
+                <textarea name="message" id="message" required data-i18n="del.messageBody">Please delete my Click & Clique account and associated personal data.</textarea>
               </label>
-              <p class="form-note">
+              <p class="form-note" data-i18n="del.note">
                 This sends a message to our support inbox. Use the same email as your app account
                 so we can verify the request.
               </p>
               <div class="form-actions">
-                <button class="btn btn--danger" type="submit">Send deletion request</button>
-                <a class="btn btn--outline" href="privacy.html">Read Privacy Policy</a>
+                <button class="btn btn--danger" type="submit" data-i18n="del.send">Send deletion request</button>
+                <a class="btn btn--outline" href="privacy.html" data-i18n="del.policy">Read Privacy Policy</a>
               </div>
             </form>
           </div>
 
           <div class="panel">
-            <h2>What we delete</h2>
+            <h2 data-i18n="del.whatTitle">What we delete</h2>
             <ul class="muted" style="margin: 0; padding-left: 1.2rem;">
-              <li>Profile, photo, username, devices, and login account</li>
-              <li>Messages and other personal data tied to your account</li>
-              <li>Your event participation records</li>
+              <li data-i18n="del.what1">Profile, photo, username, devices, and login account</li>
+              <li data-i18n="del.what2">Messages and other personal data tied to your account</li>
+              <li data-i18n="del.what3">Your event participation records</li>
             </ul>
-            <p class="form-note" style="margin-top: 1rem;">
+            <p class="form-note" style="margin-top: 1rem;" data-i18n-html="del.whatNote">
               If you delete your account while you still have outstanding obligations
               under App rules, consequences disclosed before in-app deletion may apply.
               A limited non-identifying signal may be kept so re-registration cannot
@@ -121,10 +122,10 @@
       <div class="site-footer__inner">
         <div>© <span id="y"></span> Click &amp; Clique</div>
         <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
-          <a href="mailto:support@clickandclique.com">Support</a>
+          <a href="index.html" data-i18n="foot.home">Home</a>
+          <a href="privacy.html" data-i18n="foot.privacy">Privacy Policy</a>
+          <a href="terms.html" data-i18n="foot.terms">Terms of Service</a>
+          <a href="mailto:support@clickandclique.com" data-i18n="foot.support">Support</a>
         </div>
       </div>
     </footer>
