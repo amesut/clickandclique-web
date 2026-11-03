@@ -145,7 +145,6 @@
       "privacy.s10p": "We may update this policy from time to time. We will change the “Last updated” date above and, when appropriate, provide additional notice in the App.",
       "privacy.s11": "11. Contact",
       "privacy.s11p": "Questions or requests: <a href=\"mailto:support@clickandclique.com\">support@clickandclique.com</a>",
-      "privacy.note": "This page is provided for transparency with users and app stores. It is not legal advice. Have counsel review before publishing if needed.",
 
       "terms.title": "Terms of Service — Click & Clique",
       "terms.meta": "Terms of Service for the Click & Clique mobile app.",
@@ -211,8 +210,7 @@
       "terms.s16": "16. Changes to these Terms",
       "terms.s16p": "We may update these Terms from time to time. We will change the “Last updated” date above and, when appropriate, provide additional notice in the App. Continued use after the effective date means you accept the updated Terms.",
       "terms.s17": "17. Contact",
-      "terms.s17p": "Questions about these Terms: <a href=\"mailto:support@clickandclique.com\">support@clickandclique.com</a>",
-      "terms.note": "This page is provided for transparency with users and app stores. It is not legal advice. Have counsel review before publishing if needed."
+      "terms.s17p": "Questions about these Terms: <a href=\"mailto:support@clickandclique.com\">support@clickandclique.com</a>"
     },
     tr: {
       "skip": "İçeriğe geç",
@@ -350,7 +348,6 @@
       "privacy.s10p": "Bu politikayı zaman zaman güncelleyebiliriz. Yukarıdaki “Son güncelleme” tarihini değiştiririz ve uygun olduğunda Uygulamada ek bildirim veririz.",
       "privacy.s11": "11. İletişim",
       "privacy.s11p": "Sorular veya talepler: <a href=\"mailto:support@clickandclique.com\">support@clickandclique.com</a>",
-      "privacy.note": "Bu sayfa, kullanıcılar ve uygulama mağazaları için şeffaflık amacıyla sunulur. Hukuki danışmanlık değildir. Gerekirse yayımlamadan önce bir hukukçu tarafından gözden geçirilmelidir.",
 
       "terms.title": "Kullanım Koşulları — Click & Clique",
       "terms.meta": "Click & Clique mobil uygulamasının kullanım koşulları.",
@@ -416,8 +413,7 @@
       "terms.s16": "16. Bu Koşullardaki değişiklikler",
       "terms.s16p": "Bu Koşulları zaman zaman güncelleyebiliriz. Yukarıdaki “Son güncelleme” tarihini değiştiririz ve uygun olduğunda Uygulamada ek bildirim veririz. Yürürlük tarihinden sonra kullanmaya devam etmeniz, güncellenmiş Koşulları kabul ettiğiniz anlamına gelir.",
       "terms.s17": "17. İletişim",
-      "terms.s17p": "Bu Koşullar hakkında sorular: <a href=\"mailto:support@clickandclique.com\">support@clickandclique.com</a>",
-      "terms.note": "Bu sayfa, kullanıcılar ve uygulama mağazaları için şeffaflık amacıyla sunulur. Hukuki danışmanlık değildir. Gerekirse yayımlamadan önce bir hukukçu tarafından gözden geçirilmelidir."
+      "terms.s17p": "Bu Koşullar hakkında sorular: <a href=\"mailto:support@clickandclique.com\">support@clickandclique.com</a>"
     }
   };
 
