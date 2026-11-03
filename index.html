@@ -3,64 +3,65 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Click & Clique — discover events in your city, match with people going, and build your social circle." />
-  <title>Click & Clique</title>
+  <meta name="description" content="Click &amp; Clique — discover events in your city, match with people going, and build your social circle." data-i18n-content="home.meta" />
+  <title data-i18n="home.title">Click &amp; Clique</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Syne:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
+  <script src="js/site-copy.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
   <div class="page">
     <header class="site-header" id="siteHeader">
       <div class="site-header__inner">
         <a class="brand" href="index.html">Click <span>&amp;</span> Clique</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" id="navToggle">Menu</button>
-        <nav class="nav" id="siteNav" aria-label="Primary">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="delete-account.html">Delete account</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav" id="navToggle" data-i18n="nav.menu">Menu</button>
+        <nav class="nav" id="siteNav" aria-label="Primary" data-i18n-aria="nav.aria">
+          <a href="index.html" aria-current="page" data-i18n="nav.home">Home</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a href="terms.html" data-i18n="nav.terms">Terms</a>
+          <a href="delete-account.html" data-i18n="nav.delete">Delete account</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="page-main">
-      <section class="hero" aria-label="Click and Clique">
+      <section class="hero" aria-label="Click and Clique" data-i18n-aria="home.heroAria">
         <div class="hero__inner">
           <p class="brand-mark">Click <span>&amp; Clique</span></p>
-          <p class="tagline">
+          <p class="tagline" data-i18n="home.tagline">
             Find events in your city, meet people who are going, and turn plans into real nights out.
           </p>
           <div class="hero-actions">
-            <a class="btn btn--primary" href="#about">How it works</a>
-            <a class="btn btn--ghost" href="privacy.html">Privacy</a>
+            <a class="btn btn--primary" href="#about" data-i18n="home.how">How it works</a>
+            <a class="btn btn--ghost" href="privacy.html" data-i18n="home.privacyBtn">Privacy</a>
           </div>
         </div>
       </section>
 
       <section class="section" id="about">
         <div class="wrap">
-          <p class="eyebrow">The app</p>
-          <h2>Events first. People next.</h2>
-          <p class="lead">
+          <p class="eyebrow" data-i18n="home.eyebrow">The app</p>
+          <h2 data-i18n="home.h2">Events first. People next.</h2>
+          <p class="lead" data-i18n="home.lead">
             Browse ticketable and user-created events in your city, join what you like,
             and connect with people who are going — all in one place.
           </p>
 
           <div class="features" style="margin-top: 2.5rem;">
             <article class="feature">
-              <h3>Events in your city</h3>
-              <p>Ticketable listings and user-created nights in your city.</p>
+              <h3 data-i18n="home.f1t">Events in your city</h3>
+              <p data-i18n="home.f1b">Ticketable listings and user-created nights in your city.</p>
             </article>
             <article class="feature">
-              <h3>Meet people going</h3>
-              <p>Connect with others attending the same event.</p>
+              <h3 data-i18n="home.f2t">Meet people going</h3>
+              <p data-i18n="home.f2b">Connect with others attending the same event.</p>
             </article>
             <article class="feature">
-              <h3>Stay in touch</h3>
-              <p>Message people you connect with and share the night together.</p>
+              <h3 data-i18n="home.f3t">Stay in touch</h3>
+              <p data-i18n="home.f3b">Message people you connect with and share the night together.</p>
             </article>
           </div>
         </div>
@@ -70,10 +71,10 @@
         <div class="wrap">
           <div class="cta-band">
             <div>
-              <h2 style="margin:0;color:#fff;">Need your data removed?</h2>
-              <p>Delete your account in the app, or request deletion from the web.</p>
+              <h2 style="margin:0;color:#fff;" data-i18n="home.ctaTitle">Need your data removed?</h2>
+              <p data-i18n="home.ctaBody">Delete your account in the app, or request deletion from the web.</p>
             </div>
-            <a class="btn btn--outline" href="delete-account.html">Delete account</a>
+            <a class="btn btn--outline" href="delete-account.html" data-i18n="home.ctaBtn">Delete account</a>
           </div>
         </div>
       </section>
@@ -83,10 +84,10 @@
       <div class="site-footer__inner">
         <div>© <span id="y"></span> Click &amp; Clique</div>
         <div class="footer-links">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Service</a>
-          <a href="delete-account.html">Delete Account</a>
-          <a href="mailto:support@clickandclique.com">Support</a>
+          <a href="privacy.html" data-i18n="foot.privacy">Privacy Policy</a>
+          <a href="terms.html" data-i18n="foot.terms">Terms of Service</a>
+          <a href="delete-account.html" data-i18n="foot.delete">Delete Account</a>
+          <a href="mailto:support@clickandclique.com" data-i18n="foot.support">Support</a>
         </div>
       </div>
     </footer>
