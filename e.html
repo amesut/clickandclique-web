@@ -7,23 +7,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Syne:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="/css/site.css" />
+  <script src="/js/site-copy.js"></script>
 </head>
 <body>
   <main id="main" class="page-main">
-    <section class="hero" aria-label="Open Click and Clique">
+      <section class="hero" data-i18n-aria="e.aria" aria-label="Open Click and Clique">
       <div class="hero__inner">
         <p class="brand-mark">Click <span>&amp; Clique</span></p>
-        <p class="tagline" id="status">Opening the event…</p>
+        <p class="tagline" id="status" data-i18n="e.opening">Opening the event…</p>
         <div class="hero-actions">
-          <a class="btn btn--primary" id="openApp" href="index.html">Open in app</a>
-          <a class="btn btn--ghost" id="openStore" href="index.html">Get the app</a>
+          <a class="btn btn--primary" id="openApp" href="index.html" data-i18n="e.openApp">Open in app</a>
+          <a class="btn btn--ghost" id="openStore" href="index.html" data-i18n="e.getApp">Get the app</a>
         </div>
       </div>
     </section>
   </main>
   <script>
-    (function () {
+    document.addEventListener("DOMContentLoaded", function () {
       var ANDROID_PACKAGE = "com.clickandclique.app";
       var PLAY_STORE =
         "https://play.google.com/store/apps/details?id=" + ANDROID_PACKAGE;
@@ -33,6 +34,14 @@
         ? "https://apps.apple.com/app/id" + APPLE_APP_ID
         : "https://apps.apple.com/search?term=" +
           encodeURIComponent("Click and Clique");
+
+      function t(key, fallback) {
+        if (window.SITE_LANG && typeof SITE_LANG.t === "function") {
+          var value = SITE_LANG.t(key);
+          if (value) return value;
+        }
+        return fallback;
+      }
 
       var ua = navigator.userAgent || "";
       var isAndroid = /Android/i.test(ua);
@@ -52,7 +61,7 @@
       if (openStore) openStore.setAttribute("href", storeUrl);
 
       if (!eventId) {
-        if (status) status.textContent = "Get Click & Clique.";
+        if (status) status.textContent = t("e.getBrand", "Get Click & Clique.");
         if (openApp) openApp.setAttribute("href", storeUrl);
         if (isAndroid || isIOS) window.location.replace(storeUrl);
         return;
@@ -93,9 +102,12 @@
       }
 
       if (status) {
-        status.textContent = "Open this event in the Click & Clique app.";
+        status.textContent = t(
+          "e.openEvent",
+          "Open this event in the Click & Clique app."
+        );
       }
-    })();
+    });
   </script>
 </body>
 </html>
